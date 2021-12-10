@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="user rounded-box">
+            <div class="user__name box-padding1">
+                <div>
+                    <img class="user__img" src="./images/image-jeremy.png" alt="">
+                </div>
+                <div>
+                    <span>Report for</span>
+                    <h1>
+                        Jeremy Robson
+                    </h1>
+                </div>
+            </div>
+            <div class="user__frequency box-padding">
+                <h3><a href="#daily" class="user__frequency__link" id="user__frequency__daily" class="box-padding">Daily</a></h3>
+                <h3><a href="#weekly" class="user__frequency__link" id="user__frequency__weekly" class="box-padding">Weekly</a></h3>
+                <h3><a href="#monthly" class="user__frequency__link" id="user__frequency__monthly" class="box-padding">Monthly</a></h3>
+            </div>
+        </div>
+
+        <div class="work rounded-box">
+            <div class="bg-primary-400 box-padding2">
+                <div class="row">
+                    <h2 class="heading-neutral">Work</h2>
+                    <a href=""><img src="./images/icon-ellipsis.svg" alt=""></a>
+                </div>
+                <div class="row">
+                    <div id="work__daily" class="daily">
+                        <div class="current">5hrs</div> <!-- daily -->
+                        <div class="previous">Yesterday - 7hrs</div> <!-- daily -->
+                    </div>
+                    <div id="work__weekly" class="weekly">
+                        <div class="current">32hrs</div> <!-- weekly -->
+                        <div class="previous">Last Week - 36hrs</div> <!-- weekly -->
+                    </div>
+                    <div id="work__monthly" class="monthly">
+                        <div class="current">103hrs</div> <!-- monthly -->
+                        <div class="previous">Last Month - 128hrs</div> <!-- monthly -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="play rounded-box">
+            <div class="bg-primary-400 box-padding2">
+                <div class="row">
+                    <h2 class="heading-neutral">Play</h2>
+                    <a href=""><img src="./images/icon-ellipsis.svg" alt=""></a>
+                </div>
+                <div class="row">
+                    <div id="play__daily" class="daily">
+                        <div class="current">1hr</div> <!-- daily -->
+                        <div class="previous">Yesterday - 2hrs</div> <!-- daily -->
+                    </div>
+                    <div id="play__weekly" class="weekly">
+                        <div class="current">10hrs</div> <!-- weekly -->
+                        <div class="previous">Last Week - 8hrs</div> <!-- weekly -->
+                    </div>
+                    <div id="play__monthly" class="monthly">
+                        <div class="current">23hrs</div> <!-- monthly -->
+                        <div class="previous">Last Month - 29hrs</div> <!-- monthly -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="study rounded-box">
+            <div class="bg-primary-400 box-padding2">
+                <div class="row">
+                    <h2 class="heading-neutral">Study</h2>
+                    <a href=""><img src="./images/icon-ellipsis.svg" alt=""></a>
+                </div>
+                <div class="row">
+                    <div id="study__daily" class="daily">
+                        <div class="current">0hrs</div> <!-- daily -->
+                        <div class="previous">Yesterday - 1hr</div> <!-- daily -->
+                    </div>
+                    <div id="study__weekly" class="weekly">
+                        <div class="current">4hrs</div> <!-- weekly -->
+                        <div class="previous">Last Week - 7hrs</div> <!-- weekly -->
+                    </div>
+                    <div id="study__monthly" class="monthly">
+                        <div class="current">13hrs</div> <!-- monthly -->
+                        <div class="previous">Last Month - 19hrs</div> <!-- monthly -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="exercise rounded-box">
+            <div class="bg-primary-400 box-padding2">
+                <div class="row">
+                    <h2 class="heading-neutral">Exercise</h2>
+                    <a href=""><img src="./images/icon-ellipsis.svg" alt=""></a>
+                </div>
+                <div class="row">
+                    <div id="exercise__daily" class="daily">
+                        <div class="current">1hr</div> <!-- daily -->
+                        <div class="previous">Yesterday - 1hr</div> <!-- daily -->
+                    </div>
+                    <div id="exercise__weekly" class="weekly">
+                        <div class="current">4hrs</div> <!-- weekly -->
+                        <div class="previous">Last Week - 5hrs</div> <!-- weekly -->
+                    </div>
+                    <div id="exercise__monthly" class="monthly">
+                        <div class="current">11hrs</div> <!-- monthly -->
+                        <div class="previous">Last Month - 18hrs</div> <!-- monthly -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="social rounded-box">
+            <div class="bg-primary-400 box-padding2">
+                <div class="row">
+                    <h2 class="heading-neutral">Social</h2>
+                    <a href=""><img src="./images/icon-ellipsis.svg" alt=""></a>
+                </div>
+                <div class="row">
+                    <div id="social__daily" class="daily">
+                        <div class="current">1hr</div> <!-- daily -->
+                        <div class="previous">Yesterday - 3hrs</div> <!-- daily -->
+                    </div>
+                    <div id="social__weekly" class="weekly">
+                        <div class="current">5hrs</div> <!-- weekly -->
+                        <div class="previous">Last Week - 10hrs</div> <!-- weekly -->
+                    </div>
+                    <div id="social__monthly" class="monthly">
+                        <div class="current">21hrs</div> <!-- monthly -->
+                        <div class="previous">Last Month - 23hrs</div> <!-- monthly -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="self-care rounded-box">
+            <div class="bg-primary-400 box-padding2">
+                <div class="row">
+                    <h2 class="heading-neutral">Self Care</h2>
+                    <a href=""><img class="" src="./images/icon-ellipsis.svg" alt=""></a>
+                </div>
+                <div class="row">
+                    <div id="self-care__daily" class="daily">
+                        <div class="current">0hrs</div> <!-- daily -->
+                        <div class="previous">Yesterday - 1hr</div> <!-- daily -->
+                    </div>
+                    <div id="self-care__weekly" class="weekly">
+                        <div class="current">2hrs</div> <!-- weekly -->
+                        <div class="previous">Last Week - 2hrs</div> <!-- weekly -->
+                    </div>
+                    <div id="self-care__monthly" class="monthly">
+                        <div class="current">7hrs</div> <!-- monthly -->
+                        <div class="previous">Last Month - 11hrs</div> <!-- monthly -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
