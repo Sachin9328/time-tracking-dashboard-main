@@ -3,7 +3,7 @@ let weekly = document.getElementsByClassName('weekly');
 let monthly = document.getElementsByClassName('monthly');
 
 window.onload = function() {
-    $(weekly).hide();
+    $(daily).hide();
     $(monthly).hide();
 };
 
@@ -23,9 +23,7 @@ function hideAndShow() {
     }
 };
 
-let frequency = document.querySelectorAll('.user__frequency__link');
-for (let i = 0; i < frequency.length; i++) {
-    frequency[i].addEventListener('click', function (_event) {  
-        hideAndShow(this); 
-    });
-}
+window.addEventListener("hashchange", hideAndShow);
+
+
+$('#user__frequency__weekly').focus();
