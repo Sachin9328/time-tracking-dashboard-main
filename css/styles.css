@@ -10,8 +10,9 @@
     --clr-neutral: hsl(0, 100%, 100%);
     --clr-primary-100: hsl(236, 100%, 87%);
     --clr-primary-200: hsl(235, 45%, 61%);
+    --clr-primary-250: hsl(235, 45%, 46%);
     --clr-primary-300: hsl(246, 80%, 60%);
-    --clr-primary-400: hsl(235, 46%, 20%);
+    --clr-primary-400: hsl(236, 45%, 20%);
     --clr-primary-500: hsl(226, 43%, 10%);
     --clr-work: hsl(15, 100%, 70%);
     --clr-play: hsl(195, 74%, 62%);
@@ -40,6 +41,15 @@ a {
     background-color: var(--clr-primary-400);
     margin-top: 2.8rem;
     border-radius: 1.25rem 1.25rem 0 0;
+}
+
+.bg-primary-400:hover, .bg-primary-400:focus {
+    background-color: var(--clr-primary-250);
+    cursor: pointer;
+}
+
+.user {
+    grid-area: user;
 }
 
 .user__frequency__link {
@@ -75,6 +85,14 @@ a {
 
 .box-padding2 {
     padding: 1rem 2rem 2rem 2rem;
+}
+    
+.user__subheading {
+    opacity: .7;
+}
+
+.user__heading {
+    font-weight: 300;
 }
 
 .user__name {
@@ -114,8 +132,8 @@ a {
     margin-bottom: 0.846rem;
 } 
 
-.ellipsis {
-    color: var(--clr-neutral);
+.ellipsis:hover {
+    filter:  brightness(0) invert(1);
 } 
 
 .work {
@@ -123,6 +141,7 @@ a {
     background-image: url(../images/icon-work.svg);
     background-repeat: no-repeat;
     background-position: 95% -7%;
+    grid-area: work;
 }
 
 .play {
@@ -130,6 +149,7 @@ a {
     background-image: url(../images/icon-play.svg);
     background-repeat: no-repeat;
     background-position: 95% -2%;
+    grid-area: play;
 }
 
 .study {
@@ -137,6 +157,7 @@ a {
     background-image: url(../images/icon-study.svg);
     background-repeat: no-repeat;
     background-position: 95% -7%;
+    grid-area: study;
 }
 
 .exercise {
@@ -144,6 +165,7 @@ a {
     background-image: url(../images/icon-exercise.svg);
     background-repeat: no-repeat;
     background-position: 95% 0%;
+    grid-area: exercise;
 }
 
 .social {
@@ -151,6 +173,7 @@ a {
     background-image: url(../images/icon-social.svg);
     background-repeat: no-repeat;
     background-position: 95% -7%;
+    grid-area: social;
 }
 
 .self-care {
@@ -158,6 +181,7 @@ a {
     background-image: url(../images/icon-self-care.svg);
     background-repeat: no-repeat;
     background-position: 95% -7%;
+    grid-area: self-care;
 }
 
 .daily,
@@ -179,9 +203,95 @@ a {
 }
 
 .attribution { 
-    font-size: 11px; text-align: center; 
+    font-size: 11px; 
+    text-align: center;
+    grid-area: attribution; 
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: #ffee00; 
+}
+
+@media (min-width: 1440px) {
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .container {
+        display: grid;
+        gap: 2em;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "user work play study"
+            "user exercise social self-care"
+            "attribution attribution attribution attribution";
+        margin: auto auto;    
+    }
+    
+    .row1 { 
+        margin-bottom: 1em;
+    }
+
+    .row2 { 
+        margin-bottom: .8em;
+    }
+
+    .user__name {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    } 
+
+    .user__frequency {
+        flex-direction: column;
+        align-self: center;
+        margin-top: .8em;
+    }
+
+    .user__frequency > h3 {
+        margin: .8em 0;
+    }
+
+    .user__frequency__link {
+        font-size: 20px;
+    }
+    
+    .user__heading {
+        display: flex;
+        flex-direction: column;
+        font-size: 38px;
+        letter-spacing: 0.27px;
+    } 
+
+    .user__name {
+        padding: 3.4rem 7rem 3.4rem 2rem;
+    }
+
+    .heading-neutral {
+        font-size: 1.3rem;
+    } 
+
+    .rounded-box + .rounded-box {
+        margin-top: auto;
+    }
+
+    .previous {
+        margin-left: 0;
+    }
+
+    .daily,
+    .weekly,
+    .monthly {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .current {
+        font-size: 4rem;
+        font-weight: 300;
+        margin-bottom: .2em;
+    }
 }

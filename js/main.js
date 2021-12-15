@@ -1,6 +1,6 @@
-let daily = document.getElementsByClassName('daily');
-let weekly = document.getElementsByClassName('weekly');
-let monthly = document.getElementsByClassName('monthly');
+let daily = $('.daily');
+let weekly = $('.weekly');
+let monthly = $('.monthly');
 
 window.onload = function() {
     $(daily).hide();
