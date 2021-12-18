@@ -2,10 +2,10 @@ let daily = $('.daily');
 let weekly = $('.weekly');
 let monthly = $('.monthly');
 
-window.onload = function() {
+$(document).ready(function() {
     $(daily).hide();
     $(monthly).hide();
-};
+});
 
 function hideAndShow() {
     if(location.hash === '#daily') {
@@ -23,7 +23,6 @@ function hideAndShow() {
     }
 };
 
-window.addEventListener("hashchange", hideAndShow);
-
+window.addEventListener('hashchange', hideAndShow);
 
 $('#user__frequency__weekly').focus();
